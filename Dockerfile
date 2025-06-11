@@ -1,7 +1,6 @@
-FROM openjdk:16-jdk-alpine
 
-RUN addgroup -S spring && adduser -S spring -G spring
-
+FROM ubuntu:16.04 
+RUN apt-get update && apt-get install -y some_package
 EXPOSE 8080
 
 ENV JAVA_PROFILE prod
